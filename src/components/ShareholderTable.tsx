@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -5,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 // Define types for shareholders
 interface Shareholder {
@@ -961,6 +963,7 @@ const ShareholderTable: React.FC<ShareholderTableProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
+  const isMobile = useIsMobile();
   
   const filteredShareholders = shareholders.filter(shareholder => 
     shareholder.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -1005,29 +1008,38 @@ const ShareholderTable: React.FC<ShareholderTableProps> = ({
         </div>
       </CardHeader>
       <CardContent>
-        <div className="rounded-md border">
+        <div className="rounded-md border overflow-x-auto">
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[300px]">Nome</TableHead>
-                <TableHead className="w-[200px]">Codice Fiscale</TableHead>
-                <TableHead className="text-right">Quota %</TableHead>
+                <TableHead className="w-[180px] md:w-[240px]">Nome</TableHead>
+                <TableHead className="w-[120px] md:w-[180px]">Codice Fiscale</TableHead>
+                <TableHead className="text-right w-[70px]">Quota %</TableHead>
                 <TableHead>Sede</TableHead>
-                <TableHead className="hidden md:table-cell">Capitale</TableHead>
-                <TableHead className="hidden lg:table-cell">Fatturato</TableHead>
-                <TableHead className="hidden lg:table-cell">Sito Web</TableHead>
+                <TableHead className="hidden sm:table-cell">Capitale</TableHead>
+                <TableHead className="hidden sm:table-cell">Fatturato</TableHead>
+                <TableHead className="hidden md:table-cell">Sito Web</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {currentShareholders.map((shareholder, i) => (
                 <TableRow key={i}>
-                  <TableCell className="font-medium">{shareholder.name}</TableCell>
+                  <TableCell className="font-medium text-xs md:text-sm">
+                    {shareholder.name}
+                    {isMobile && shareholder.website && (
+                      <div className="mt-1">
+                        <a href={shareholder.website} target="_blank" rel="noopener noreferrer" className="text-extrafin-600 hover:underline text-xs">
+                          Sito Web
+                        </a>
+                      </div>
+                    )}
+                  </TableCell>
                   <TableCell className="font-mono text-xs">{shareholder.fiscalCode}</TableCell>
                   <TableCell className="text-right font-medium">{shareholder.percentage}%</TableCell>
-                  <TableCell>{shareholder.location || "-"}</TableCell>
-                  <TableCell className="hidden md:table-cell">{shareholder.capital || "-"}</TableCell>
-                  <TableCell className="hidden lg:table-cell">{shareholder.revenue || "-"}</TableCell>
-                  <TableCell className="hidden lg:table-cell">
+                  <TableCell className="text-xs md:text-sm">{shareholder.location || "-"}</TableCell>
+                  <TableCell className="hidden sm:table-cell text-xs md:text-sm">{shareholder.capital || "-"}</TableCell>
+                  <TableCell className="hidden sm:table-cell text-xs md:text-sm">{shareholder.revenue || "-"}</TableCell>
+                  <TableCell className="hidden md:table-cell">
                     {shareholder.website ? (
                       <a href={shareholder.website} target="_blank" rel="noopener noreferrer" className="text-extrafin-600 hover:underline">
                         Sito Web
@@ -1049,22 +1061,22 @@ const ShareholderTable: React.FC<ShareholderTableProps> = ({
         
         {/* Paginazione */}
         {totalPages > 1 && (
-          <div className="flex justify-between items-center mt-4">
-            <div className="text-sm text-gray-500">
+          <div className="flex flex-col sm:flex-row justify-between items-center mt-4 gap-2">
+            <div className="text-xs sm:text-sm text-gray-500">
               Mostrando {(currentPage - 1) * itemsPerPage + 1}-{Math.min(currentPage * itemsPerPage, filteredShareholders.length)} di {filteredShareholders.length} soci
             </div>
             <div className="flex space-x-2">
               <button
                 onClick={handlePrevPage}
                 disabled={currentPage === 1}
-                className={`px-3 py-1 rounded ${currentPage === 1 ? 'bg-gray-200 text-gray-500' : 'bg-extrafin-100 text-extrafin-800 hover:bg-extrafin-200'}`}
+                className={`px-3 py-1 rounded text-sm ${currentPage === 1 ? 'bg-gray-200 text-gray-500' : 'bg-extrafin-100 text-extrafin-800 hover:bg-extrafin-200'}`}
               >
                 Precedente
               </button>
               <button
                 onClick={handleNextPage}
                 disabled={currentPage === totalPages}
-                className={`px-3 py-1 rounded ${currentPage === totalPages ? 'bg-gray-200 text-gray-500' : 'bg-extrafin-100 text-extrafin-800 hover:bg-extrafin-200'}`}
+                className={`px-3 py-1 rounded text-sm ${currentPage === totalPages ? 'bg-gray-200 text-gray-500' : 'bg-extrafin-100 text-extrafin-800 hover:bg-extrafin-200'}`}
               >
                 Successivo
               </button>
