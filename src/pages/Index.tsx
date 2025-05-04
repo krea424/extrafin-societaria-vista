@@ -23,7 +23,7 @@ const Index = () => {
           <ShareholderTable />
           
           <footer className="mt-16 text-center text-sm text-gray-500">
-            <p>Extrafin Group Corporate Structure • Confidential • For Investment Purposes Only</p>
+            <p>Extrafin Group - Struttura Societaria • Riservato • Solo per Finalità di Investimento</p>
           </footer>
         </div>
       </main>
