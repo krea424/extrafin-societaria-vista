@@ -1,14 +1,11 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import CompanyOverview from '@/components/CompanyOverview';
 import KeyMetrics from '@/components/KeyMetrics';
 import ShareholderDistribution from '@/components/ShareholderDistribution';
 import ShareholderTable from '@/components/ShareholderTable';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
+  return <div className="min-h-screen bg-gray-50">
       <Header />
       
       <main className="container mx-auto px-4 pb-16">
@@ -23,12 +20,10 @@ const Index = () => {
           <ShareholderTable />
           
           <footer className="mt-16 text-center text-sm text-gray-500">
-            <p>Extrafin Group - Struttura Societaria • Riservato • Solo per Finalità di Investimento</p>
+            <p>Analisi FinEu - Extrafin Group - Panoramica e Struttura Societaria • Riservato • Solo per Finalità di Investimento</p>
           </footer>
         </div>
       </main>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
