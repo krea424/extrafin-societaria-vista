@@ -14,13 +14,13 @@ const Header: React.FC<HeaderProps> = ({
               <span className="text-white font-bold text-xl">E</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-extrafin-900">Extrafin Group - Analisi FinEu</h1>
+              <h1 className="text-2xl font-bold text-extrafin-900">Analisi FinEu - Extrafin Group - </h1>
               <p className="text-sm text-gray-500">Struttura Societaria & Panoramica Investimenti</p>
             </div>
           </div>
           <div className="flex space-x-4 text-sm">
-            <span className="text-lg text-slate-900">FinEu</span>
-            <span className="font-medium text-extrafin-800">Maggio 2025</span>
+            <span className="text-lg text-slate-900 px-[2px] py-0 text-center">FinEu</span>
+            <span className="font-medium text-extrafin-800">5 Maggio 2025</span>
           </div>
         </div>
       </div>
