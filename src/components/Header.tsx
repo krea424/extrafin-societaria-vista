@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({
             </div>
           </div>
           <div className="flex space-x-4 text-sm">
-            <span className="text-lg text-slate-900 px-[2px] py-0 text-center">FinEu</span>
+            <span className="text-lg text-slate-900 px-[2px] py-0 text-center"></span>
             <span className="font-medium text-extrafin-800">5 Maggio 2025</span>
           </div>
         </div>
