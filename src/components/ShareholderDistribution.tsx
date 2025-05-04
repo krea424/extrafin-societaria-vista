@@ -31,7 +31,7 @@ const ordinaryShareholdersData = [
   { name: "N.G.C.- NEW GENERATION COMPANY SRL", percentage: 5.13, color: "#1E40AF" },
   { name: "EXTRACREDIT S.R.L.", percentage: 5.00, color: "#1E3A8A" },
   { name: "INVEST CLUB ITALIA", percentage: 5.00, color: "#3730A3" },
-  { name: "Others", percentage: 47.00, color: "#6B7280" },
+  { name: "Altri", percentage: 47.00, color: "#6B7280" },
 ];
 
 const preferenceShareholdersData = [
@@ -41,7 +41,7 @@ const preferenceShareholdersData = [
   { name: "N.G.C.- NEW GENERATION COMPANY SRL", percentage: 7.69, color: "#92400E" },
   { name: "MONEGATO SIMONE", percentage: 6.40, color: "#78350F" },
   { name: "PANTE ELOISA", percentage: 5.12, color: "#B45309" },
-  { name: "Others", percentage: 34.25, color: "#6B7280" },
+  { name: "Altri", percentage: 34.25, color: "#6B7280" },
 ];
 
 const CustomTooltip = ({ active, payload }: any) => {
@@ -61,16 +61,16 @@ const ShareholderDistribution: React.FC = () => {
   return (
     <Card className="border-extrafin-200">
       <CardHeader>
-        <CardTitle className="text-extrafin-800">Shareholder Distribution</CardTitle>
+        <CardTitle className="text-extrafin-800">Distribuzione Azionisti</CardTitle>
         <CardDescription>
-          Overview of Extrafin's corporate structure and ownership distribution
+          Panoramica della struttura societaria e distribuzione della proprietà di Extrafin
         </CardDescription>
       </CardHeader>
       <CardContent>
         <Tabs defaultValue="ordinary">
           <TabsList className="grid grid-cols-2 mb-6">
-            <TabsTrigger value="ordinary">Ordinary Shares</TabsTrigger>
-            <TabsTrigger value="preference">Preference Shares</TabsTrigger>
+            <TabsTrigger value="ordinary">Azioni Ordinarie</TabsTrigger>
+            <TabsTrigger value="preference">Azioni con Diritti Limitati</TabsTrigger>
           </TabsList>
           
           <TabsContent value="ordinary" className="mt-0">
@@ -98,29 +98,29 @@ const ShareholderDistribution: React.FC = () => {
                 </ResponsiveContainer>
               </div>
               <div className="space-y-3">
-                <h3 className="font-medium text-lg text-extrafin-800">Key Information</h3>
+                <h3 className="font-medium text-lg text-extrafin-800">Informazioni Chiave</h3>
                 <p className="text-sm text-gray-600">
-                  Ordinary shares represent voting rights and standard equity participation in Extrafin Spa. 
-                  The company has 20,000 ordinary shares distributed among 50+ shareholders.
+                  Le azioni ordinarie rappresentano i diritti di voto e la partecipazione azionaria standard in Extrafin Spa. 
+                  La società ha 20.000 azioni ordinarie distribuite tra più di 50 azionisti.
                 </p>
                 <div className="bg-extrafin-50 p-4 rounded-md border border-extrafin-100">
-                  <h4 className="font-medium text-sm text-extrafin-700 mb-2">Major Shareholders</h4>
+                  <h4 className="font-medium text-sm text-extrafin-700 mb-2">Principali Azionisti</h4>
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between">
                       <span>CORNiola S.R.L.</span>
-                      <span className="font-medium">16.18%</span>
+                      <span className="font-medium">16,18%</span>
                     </li>
                     <li className="flex justify-between">
                       <span>ROMANO LUIGI</span>
-                      <span className="font-medium">15.19%</span>
+                      <span className="font-medium">15,19%</span>
                     </li>
                     <li className="flex justify-between">
                       <span>MY GROUP S.R.L.</span>
-                      <span className="font-medium">6.50%</span>
+                      <span className="font-medium">6,50%</span>
                     </li>
                     <li className="flex justify-between">
                       <span>N.G.C.- NEW GENERATION COMPANY SRL</span>
-                      <span className="font-medium">5.13%</span>
+                      <span className="font-medium">5,13%</span>
                     </li>
                   </ul>
                 </div>
@@ -153,29 +153,29 @@ const ShareholderDistribution: React.FC = () => {
                 </ResponsiveContainer>
               </div>
               <div className="space-y-3">
-                <h3 className="font-medium text-lg text-gold-800">Key Information</h3>
+                <h3 className="font-medium text-lg text-gold-800">Informazioni Chiave</h3>
                 <p className="text-sm text-gray-600">
-                  Preference shares in Extrafin Spa (Limited Rights shares) confer economic rights without voting powers. 
-                  The company has 7,812 preference shares distributed among 50+ preference shareholders.
+                  Le azioni con diritti limitati in Extrafin Spa conferiscono diritti economici senza poteri di voto. 
+                  La società ha 7.812 azioni con diritti limitati distribuite tra più di 50 azionisti.
                 </p>
                 <div className="bg-gold-50 p-4 rounded-md border border-gold-100">
-                  <h4 className="font-medium text-sm text-gold-700 mb-2">Major Preference Shareholders</h4>
+                  <h4 className="font-medium text-sm text-gold-700 mb-2">Principali Azionisti con Diritti Limitati</h4>
                   <ul className="space-y-2 text-sm">
                     <li className="flex justify-between">
                       <span>ZUSI RICCARDO</span>
-                      <span className="font-medium">23.04%</span>
+                      <span className="font-medium">23,04%</span>
                     </li>
                     <li className="flex justify-between">
                       <span>RINCO MASSIMO</span>
-                      <span className="font-medium">13.26%</span>
+                      <span className="font-medium">13,26%</span>
                     </li>
                     <li className="flex justify-between">
                       <span>ZANDOMENEGHI GIANLUIGI</span>
-                      <span className="font-medium">10.24%</span>
+                      <span className="font-medium">10,24%</span>
                     </li>
                     <li className="flex justify-between">
                       <span>N.G.C.- NEW GENERATION COMPANY SRL</span>
-                      <span className="font-medium">7.69%</span>
+                      <span className="font-medium">7,69%</span>
                     </li>
                   </ul>
                 </div>

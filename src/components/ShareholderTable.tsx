@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -1107,4 +1106,3 @@ const ShareholderTables: React.FC = () => {
 };
 
 export default ShareholderTables;
-

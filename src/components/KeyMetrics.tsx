@@ -36,27 +36,27 @@ const KeyMetrics: React.FC = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       <MetricCard 
         icon={<Calendar className="h-6 w-6 text-extrafin-600" />} 
-        title="Founded" 
+        title="Fondata" 
         value="2015" 
-        subtitle="Vienna Stock Exchange Listed"
+        subtitle="Quotata alla Borsa di Vienna"
       />
       <MetricCard 
         icon={<Building className="h-6 w-6 text-extrafin-600" />} 
-        title="Properties" 
-        value="2,800+ m²" 
+        title="Proprietà" 
+        value="2.800+ m²" 
         subtitle="Schlosswirt Hotel Castello"
       />
       <MetricCard 
         icon={<Users className="h-6 w-6 text-extrafin-600" />} 
-        title="Shareholders" 
+        title="Azionisti" 
         value="100+" 
-        subtitle="Ordinary & Preference"
+        subtitle="Ordinari e con Diritti Limitati"
       />
       <MetricCard 
         icon={<Banknote className="h-6 w-6 text-extrafin-600" />} 
-        title="Founding Capital" 
+        title="Capitale Iniziale" 
         value="€500" 
-        subtitle="Initial Investment"
+        subtitle="Investimento Iniziale"
       />
     </div>
   );

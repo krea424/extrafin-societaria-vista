@@ -17,12 +17,12 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-extrafin-900">Extrafin Group</h1>
-              <p className="text-sm text-gray-500">Corporate Structure & Investment Overview</p>
+              <p className="text-sm text-gray-500">Struttura Societaria & Panoramica Investimenti</p>
             </div>
           </div>
           <div className="flex space-x-4 text-sm">
-            <span className="text-gray-500">Vienna Stock Exchange</span>
-            <span className="font-medium text-extrafin-800">May 2024</span>
+            <span className="text-gray-500">Borsa di Vienna</span>
+            <span className="font-medium text-extrafin-800">Maggio 2024</span>
           </div>
         </div>
       </div>

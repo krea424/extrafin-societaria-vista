@@ -9,25 +9,25 @@ const CompanyOverview: React.FC = () => {
     <div className="space-y-6">
       <Card className="border-extrafin-200">
         <CardHeader className="pb-2">
-          <CardTitle className="text-extrafin-800">Extrafin Group Overview</CardTitle>
-          <CardDescription>Founded in 2015, Extrafin has grown to become a reference advisor in the fintech sector</CardDescription>
+          <CardTitle className="text-extrafin-800">Panoramica del Gruppo Extrafin</CardTitle>
+          <CardDescription>Fondata nel 2015, Extrafin è diventata un advisor di riferimento nel settore fintech</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="prose max-w-none text-gray-600 space-y-4">
             <p>
-              Extrafin Spa distinguishes itself in the evolving fintech landscape as a reference financial advisor with a 
-              clear mission: supporting the growth of startups and SMEs through high-level financial education and 
-              specialized consulting in the fields of extraordinary finance and venture capital.
+              Extrafin Spa si distingue nel panorama in evoluzione del fintech come advisor finanziario di riferimento con una 
+              missione chiara: supportare la crescita di startup e PMI attraverso un'educazione finanziaria di alto livello e 
+              consulenza specializzata nei campi della finanza straordinaria e del venture capital.
             </p>
             <p>
-              Founded in 2015 with only €500, Extrafin has taken significant steps in the sector, achieving notable milestones 
-              including a listing on the Vienna Stock Exchange.
+              Fondata nel 2015 con soli €500, Extrafin ha compiuto passi significativi nel settore, raggiungendo traguardi importanti 
+              tra cui la quotazione alla Borsa di Vienna.
             </p>
             <p>
-              In 2023, with the acquisition of the Schlosswirt Hotel Castello, a facility located in Alta Val di Non and operational 
-              since 1907, the company embarked on a strategic path that will culminate in the creation of the first Fintech Hub 
-              integrated in a tourist-accommodation facility, an innovative project that combines financial training, strategic 
-              consulting and excellence in hospitality.
+              Nel 2023, con l'acquisizione dello Schlosswirt Hotel Castello, una struttura situata in Alta Val di Non e operativa 
+              dal 1907, l'azienda ha intrapreso un percorso strategico che culminerà nella creazione del primo Fintech Hub 
+              integrato in una struttura turistico-ricettiva, un progetto innovativo che coniuga formazione finanziaria, consulenza 
+              strategica ed eccellenza nell'ospitalità.
             </p>
           </div>
         </CardContent>
@@ -36,20 +36,20 @@ const CompanyOverview: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <BusinessUnitCard 
           icon={<Building className="h-8 w-8 text-extrafin-500" />}
-          title="Tourism & Accommodation" 
-          description="Offering innovative hospitality experiences synergistic with the fintech world"
+          title="Turismo & Ospitalità" 
+          description="Offrire esperienze di ospitalità innovative in sinergia con il mondo fintech"
         />
         
         <BusinessUnitCard 
           icon={<GraduationCap className="h-8 w-8 text-extrafin-500" />}
-          title="Education" 
-          description="Developing advanced skills in extraordinary finance and fintech"
+          title="Formazione" 
+          description="Sviluppare competenze avanzate in finanza straordinaria e fintech"
         />
         
         <BusinessUnitCard 
           icon={<Handshake className="h-8 w-8 text-extrafin-500" />}
-          title="Business Consulting" 
-          description="Supporting startups and SMEs in accessing alternative financing instruments"
+          title="Consulenza Aziendale" 
+          description="Supportare startup e PMI nell'accesso a strumenti di finanziamento alternativi"
         />
       </div>
 
@@ -57,21 +57,21 @@ const CompanyOverview: React.FC = () => {
         <CardHeader className="pb-2 border-b">
           <div className="flex items-center space-x-2">
             <LightbulbIcon className="h-5 w-5 text-gold-500" />
-            <CardTitle className="text-gold-800">Innovation Profile</CardTitle>
+            <CardTitle className="text-gold-800">Profilo Innovativo</CardTitle>
           </div>
         </CardHeader>
         <CardContent className="pt-4">
           <div className="prose max-w-none text-gray-600 space-y-4">
             <p>
-              Investing in this project means contributing to the growth of an innovative fintech hub and accessing interesting 
-              financial advantages. Thanks to the innovative nature of two of the companies involved – Mendel Business School Srl 
-              is an Innovative Start-Up, while Extraholiday Srl is an Innovative SME – investors can benefit from a 30% tax credit 
-              on the sums invested.
+              Investire in questo progetto significa contribuire alla crescita di un hub fintech innovativo e accedere a interessanti 
+              vantaggi finanziari. Grazie alla natura innovativa di due delle società coinvolte – Mendel Business School Srl 
+              è una Start-Up Innovativa, mentre Extraholiday Srl è una PMI Innovativa – gli investitori possono beneficiare di un credito 
+              d'imposta del 30% sulle somme investite.
             </p>
             <p>
-              Among the future projects of the Fintech Hub is the creation of a selected incubator for only 30 startups, offering 
-              them a unique opportunity to grow, as well as a strategic support network to access capital and develop sustainable 
-              business models.
+              Tra i progetti futuri del Fintech Hub c'è la creazione di un incubatore selezionato per sole 30 startup, offrendo 
+              loro un'opportunità unica per crescere, nonché una rete di supporto strategico per accedere a capitali e sviluppare modelli 
+              di business sostenibili.
             </p>
           </div>
         </CardContent>
