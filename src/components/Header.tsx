@@ -1,14 +1,12 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
-
 interface HeaderProps {
   className?: string;
 }
-
-const Header: React.FC<HeaderProps> = ({ className }) => {
-  return (
-    <header className={cn("py-6 md:py-10 mb-6", className)}>
+const Header: React.FC<HeaderProps> = ({
+  className
+}) => {
+  return <header className={cn("py-6 md:py-10 mb-6", className)}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
@@ -16,18 +14,16 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
               <span className="text-white font-bold text-xl">E</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-extrafin-900">Extrafin Group</h1>
+              <h1 className="text-2xl font-bold text-extrafin-900">Extrafin Group - Analisi FinEu</h1>
               <p className="text-sm text-gray-500">Struttura Societaria & Panoramica Investimenti</p>
             </div>
           </div>
           <div className="flex space-x-4 text-sm">
-            <span className="text-gray-500">Borsa di Vienna</span>
-            <span className="font-medium text-extrafin-800">Maggio 2024</span>
+            <span className="text-gray-500">Fineu</span>
+            <span className="font-medium text-extrafin-800">Maggio 2025</span>
           </div>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
