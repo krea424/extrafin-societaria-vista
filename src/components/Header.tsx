@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             <div>
               <h1 className="text-2xl font-bold text-extrafin-900">Analisi FinEu - Extrafin Group - </h1>
-              <p className="text-sm text-gray-500">Overview e Struttura Societaria </p>
+              <p className="text-sm text-gray-500">Panoramica de Gruppo e Struttura Societaria</p>
             </div>
           </div>
           <div className="flex space-x-4 text-sm">
